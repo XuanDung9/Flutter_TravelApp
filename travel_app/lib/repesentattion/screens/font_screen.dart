@@ -35,6 +35,7 @@ class _FontScreenState extends State<FontScreen> {
             _currentIndex = index;
           });
         },
+
         selectedItemColor: ColorPalette.buttonColor,
         unselectedItemColor: Colors.grey.withOpacity(0.2),
         margin: EdgeInsets.symmetric(horizontal: 12, vertical: 24),
