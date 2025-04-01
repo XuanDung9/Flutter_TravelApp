@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:travel_app/core/constants/color_constant.dart';
+import 'package:travel_app/core/helpers/local_storage_helper.dart';
 import 'package:travel_app/repesentattion/screens/splash_screen.dart';
 import 'package:travel_app/router.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await LocalStorageHelper.initLocalStorageHelper();
   runApp(const MyApp());
 }
 
