@@ -10,6 +10,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   hive_flutter: ^1.1.0
+  salomon_bottom_bar: ^3.3.2
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:
