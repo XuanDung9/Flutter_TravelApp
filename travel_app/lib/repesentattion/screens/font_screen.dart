@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class FontScreen extends StatefulWidget {
   const FontScreen({super.key});
-  static const routerName = 'font_screen';
-
+  static String routerName = '/font_screen';
   @override
   State<FontScreen> createState() => _FontScreenState();
 }
@@ -12,6 +10,6 @@ class FontScreen extends StatefulWidget {
 class _FontScreenState extends State<FontScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Placeholder();
   }
 }
