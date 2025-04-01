@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/core/constants/assets_constant.dart';
+import 'package:travel_app/core/helpers/asset_helper.dart';
+import 'package:travel_app/core/helpers/image_helper.dart';
 import 'package:travel_app/repesentattion/screens/start_screen_1.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -27,7 +29,12 @@ class _SplastScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned.fill(child: Image.asset(AssetsConstant.BackgroundApp)),
+        Positioned.fill(
+          child: ImageHelper.loadFromAsset(
+            AssetHelper.BackgroundApp,
+            fit: BoxFit.fitWidth,
+          ),
+        ),
       ],
     );
   }

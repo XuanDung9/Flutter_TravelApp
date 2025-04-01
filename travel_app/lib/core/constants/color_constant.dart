@@ -8,7 +8,7 @@ class ColorPalette {
   static const Color buttonColor = Color(0xff0373F3);
   static const Color dividerColor = Color(0xFFE5E7EB);
   static const Color text1Color = Color(0xff000000);
-  static const Color subTitleColor = Color(0xFF838383);
+  static const Color subTitleColor = Color(0xFFB4B4B4);
   static const Color backgroundScaffoldColor = Color(0xFFF2F2F2);
 }
 
