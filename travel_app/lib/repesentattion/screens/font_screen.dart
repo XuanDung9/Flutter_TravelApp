@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:travel_app/core/constants/color_constant.dart';
+import 'package:travel_app/core/helpers/asset_helper.dart';
 import 'package:travel_app/repesentattion/screens/home_screen.dart';
 
 class FontScreen extends StatefulWidget {
@@ -74,6 +75,7 @@ class _FontScreenState extends State<FontScreen> {
             icon: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                //Image.asset(AssetHelper.flyIcon),
                 Icon(FontAwesomeIcons.chartLine, size: 22),
                 Text('Chair', style: TextStyle(fontSize: 12)),
               ],
