@@ -10,4 +10,7 @@ class AssetHelper {
   static final String locationIcon = 'assets/icons/location.png';
   static final String bedIcon = iconPath + 'bed.png';
   static final String calendarIcon = iconPath + 'calendar.png';
+  static final String guestIcon = iconPath + 'guests.png';
+  static final String plusIcon = iconPath + 'plus.png';
+  static final String minusIcon = iconPath + 'minus.png';
 }

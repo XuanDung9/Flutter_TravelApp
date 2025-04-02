@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:travel_app/core/helpers/asset_helper.dart';
+import 'package:travel_app/repesentattion/screens/guest_and_room_booking_screen.dart';
 import 'package:travel_app/repesentattion/screens/select_date_screen.dart';
 import 'package:travel_app/repesentattion/widgets/app_bar_container.dart';
 import 'package:travel_app/repesentattion/widgets/button_widget.dart';
@@ -59,7 +60,11 @@ class _HotelBookingScreenState extends State<HotelBookingScreen> {
                 icon: AssetHelper.bedIcon,
                 description: '2 guest 1 room',
                 title: ' Guest and Room',
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(
+                    context,
+                  ).pushNamed(GuestAndRoomBookingScreen.RouterName);
+                },
               ),
               SizedBox(height: 12),
               ButtonWidget(title: 'Search', onTap: () {}),
