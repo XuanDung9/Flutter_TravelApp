@@ -43,10 +43,15 @@ class AppBarContainer extends StatelessWidget {
                             color: Colors.white,
                           ),
                           padding: EdgeInsets.all(12),
-                          child: Icon(
-                            FontAwesomeIcons.arrowLeft,
-                            color: Colors.black,
-                            size: 24,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Icon(
+                              FontAwesomeIcons.arrowLeft,
+                              color: Colors.black,
+                              size: 24,
+                            ),
                           ),
                         ),
                       Expanded(

@@ -14,6 +14,8 @@ class ItemBookingWidget extends StatelessWidget {
   final String title;
   final String description;
   final Function()? onTap;
+
+  static final String routerName = '/select_date_screen';
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
