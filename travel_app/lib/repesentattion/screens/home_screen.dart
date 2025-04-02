@@ -1,7 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_app/core/constants/color_constant.dart';
 import 'package:travel_app/core/constants/textstyle_constant.dart';
+import 'package:travel_app/core/helpers/asset_helper.dart';
+import 'package:travel_app/core/helpers/image_helper.dart';
+import 'package:travel_app/repesentattion/widgets/app_bar_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,73 +18,45 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(left: 24, top: 80),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return AppBarContainer(
+      title: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child: Row(
           children: [
-            Text(
-              'Find your next trip',
-              style: Textstyles.defaultStyle.subtitleTextColor.copyWith(
-                fontSize: 16,
-              ),
-              selectionColor: ColorPalette.subTitleColor,
-            ),
-            const SizedBox(height: 12),
-            Text(
-              'Nordic scenery',
-              style: Textstyles.defaultStyle.semibold,
-              selectionColor: ColorPalette.text1Color,
-            ),
-            const SizedBox(height: 48),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      //icon: Icon(FontAwesomeIcons.search, size: 22),
-                      labelText: 'Search...',
-                      border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
-                    ),
-                  ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  'Hi Jame !',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
-                SizedBox(width: 22),
-                Padding(
-                  padding: const EdgeInsets.only(right: 12),
-                  child: Container(
-                    width: 52,
-                    height: 52,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue, // Màu nền cho nút
-                    ),
-                    child: IconButton(
-                      icon: Icon(
-                        FontAwesomeIcons.bars,
-                        size: 22,
-                        color: Colors.white, // Màu icon
-                      ),
-                      onPressed: () {
-                        print("Menu icon pressed");
-                      },
-                    ),
+                SizedBox(height: 24),
+                Text(
+                  'Where are you going next ?',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: ColorPalette.text1Color,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 32),
-            Text(
-              'Popular locations',
-              style: Textstyles.defaultStyle.bold.copyWith(fontSize: 16),
-              selectionColor: ColorPalette.text1Color,
+            Spacer(),
+            Icon(FontAwesomeIcons.bell, size: 24, color: Colors.white),
+            SizedBox(width: 24),
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(24),
+              ),
+
+              child: ImageHelper.loadFromAsset(AssetHelper.avatar),
             ),
           ],
         ),
       ),
+      child: Container(color: Colors.amber),
     );
   }
 }
