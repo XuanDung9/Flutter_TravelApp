@@ -8,12 +8,13 @@ class ItemAddGuestAndRoom extends StatefulWidget {
     required this.title,
     required this.icon,
     required this.initData,
+    required this.onChanged,
   });
 
   final String title;
   final String icon;
   final int initData;
-
+  final Function(int) onChanged;
   @override
   State<ItemAddGuestAndRoom> createState() => _ItemAddGuestAndRoomState();
 }
@@ -44,7 +45,7 @@ class _ItemAddGuestAndRoomState extends State<ItemAddGuestAndRoom> {
       padding: EdgeInsets.all(24),
       child: Row(
         children: [
-          ImageHelper.loadFromAsset(widget.icon),
+          ImageHelper.loadFromAsset(widget.icon, width: 24, height: 24),
           SizedBox(width: 24),
           Text(widget.title),
           Spacer(),
@@ -57,6 +58,7 @@ class _ItemAddGuestAndRoomState extends State<ItemAddGuestAndRoom> {
                   if (_focusNode.hasFocus) {
                     _focusNode.unfocus();
                   }
+                  widget.onChanged(number);
                 });
               }
             },
@@ -99,6 +101,7 @@ class _ItemAddGuestAndRoomState extends State<ItemAddGuestAndRoom> {
                 if (_focusNode.hasFocus) {
                   _focusNode.unfocus();
                 }
+                widget.onChanged(number);
               });
             },
             child: ImageHelper.loadFromAsset(

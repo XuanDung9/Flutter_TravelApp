@@ -6,7 +6,7 @@ import 'package:travel_app/core/constants/textstyle_constant.dart';
 import 'package:travel_app/core/helpers/asset_helper.dart';
 import 'package:travel_app/core/helpers/image_helper.dart';
 import 'package:travel_app/repesentattion/screens/hotel_booking_screen.dart';
-import 'package:travel_app/repesentattion/screens/hotel_screen.dart';
+import 'package:travel_app/repesentattion/screens/hotels_screen.dart';
 import 'package:travel_app/repesentattion/widgets/app_bar_container.dart';
 
 class HomeScreen extends StatefulWidget {

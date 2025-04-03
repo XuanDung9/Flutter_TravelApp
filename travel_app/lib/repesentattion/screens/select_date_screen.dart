@@ -46,7 +46,7 @@ class SelectDateScreen extends StatelessWidget {
           ),
           SizedBox(height: 24),
           ButtonWidget(
-            title: 'Cacel',
+            title: 'Cancel',
             onTap: () {
               Navigator.of(context).pop([rangeStartDate, rangeEndDate]);
             },
